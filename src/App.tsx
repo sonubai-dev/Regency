@@ -79,7 +79,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3 shadow-lg' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex flex-col">
-          <span className={`text-2xl font-serif font-bold tracking-tight ${scrolled ? 'text-zinc-900' : 'text-white'}`}>Regency Banquets</span>
+          <span className={`text-2xl font-serif font-bold tracking-tight ${scrolled ? 'text-zinc-900' : 'text-white'}`}>Regency Banquets Vasai Nallasopara</span>
           <span className={`text-[10px] uppercase tracking-[0.2em] font-medium ${scrolled ? 'text-zinc-500' : 'text-zinc-300'}`}>Vasai–Nallasopara Banquet Hall</span>
         </div>
 
