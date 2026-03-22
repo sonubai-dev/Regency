@@ -1,37 +1,11 @@
 import { GoogleGenAI, Type, Modality } from "@google/genai";
 
 const getAI = () => {
-  if (!process.env.GEMINI_API_KEY) {
-    throw new Error("GEMINI_API_KEY is not set");
+  const apiKey = process.env.API_KEY || process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error("No API key available. Please select an API key.");
   }
-  return new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-};
-
-export const generateEventImage = async (prompt: string, aspectRatio: string = "16:9", size: string = "1K") => {
-  const ai = getAI();
-  const response = await ai.models.generateContent({
-    model: 'gemini-3-pro-image-preview',
-    contents: {
-      parts: [
-        {
-          text: `A high-end, elegant banquet hall decoration for a ${prompt}. Professional photography, cinematic lighting, luxury wedding style.`,
-        },
-      ],
-    },
-    config: {
-      imageConfig: {
-        aspectRatio: aspectRatio as any,
-        imageSize: size as any
-      },
-    },
-  });
-
-  for (const part of response.candidates?.[0]?.content?.parts || []) {
-    if (part.inlineData) {
-      return `data:image/png;base64,${part.inlineData.data}`;
-    }
-  }
-  return null;
+  return new GoogleGenAI({ apiKey });
 };
 
 export const getNearbyInfo = async (lat: number, lng: number) => {
