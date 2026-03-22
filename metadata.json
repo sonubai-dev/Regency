@@ -1,0 +1,5 @@
+{
+  "name": "Regency Banquets",
+  "description": "Premium wedding and event banquet hall in Vasai–Nallasopara. Elegant halls, fully AC, and professional event services.",
+  "requestFramePermissions": ["geolocation"]
+}
