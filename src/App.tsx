@@ -748,22 +748,32 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Map Embed */}
+        {/* Map Link */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="h-[400px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
+          className="h-[400px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white relative group"
         >
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.435742295535!2d72.8302113!3d19.4124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sRegency+Banquets+Vasai!5e0!3m2!1sen!2sin!4v1647950000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <a 
+            href="https://maps.app.goo.gl/WTrMcFQrT51aAj2U7" 
+            target="_blank" 
+            rel="noreferrer"
+            className="block w-full h-full relative"
+          >
+            {/* Placeholder map image */}
+            <img 
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2072&auto=format&fit=crop" 
+              alt="Map"
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all">
+              <span className="text-white text-lg font-serif bg-black/50 px-6 py-3 rounded-full backdrop-blur-sm">
+                Open in Google Maps
+              </span>
+            </div>
+          </a>
         </motion.div>
       </div>
     </ScrollSection>
