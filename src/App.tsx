@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { getNearbyInfo } from './services/gemini';
+import FAQ from './components/FAQ';
 
 // --- Components ---
 
@@ -163,11 +164,10 @@ const Hero = () => {
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight">
             Make Your Occasion <br />
-            <span className="italic text-amber-400">Unforgettable</span>
+            <span className="italic text-amber-400">Truly Unforgettable</span>
           </h1>
           <p className="text-zinc-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light tracking-wide">
-            Experience luxury and elegance at Vasai's premier banquet destination. 
-            Perfect for weddings, corporate events, and celebrations.
+            Vasai–Nallasopara's premier destination for luxury weddings, corporate events, and sophisticated celebrations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#contact" className="btn-premium bg-amber-600 text-white hover:bg-amber-700">
@@ -293,12 +293,12 @@ const Features = () => {
 
 const Gallery = () => {
   const images = [
-    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop", // Wedding setup
+    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop", // Elegant table
+    "https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062&auto=format&fit=crop", // Banquet hall view
+    "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop", // Decor
+    "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop", // Lighting
+    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop", // Terrace
   ];
 
   return (
@@ -756,7 +756,7 @@ const Contact = () => {
           className="h-[400px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
         >
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.435742295535!2d72.8302113!3d19.4124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI0JzQ0LjYiTiA3MsKwNDknNDguOCJF!5e0!3m2!1sen!2sin!4v1647950000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.435742295535!2d72.8302113!3d19.4124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sRegency+Banquets+Vasai!5e0!3m2!1sen!2sin!4v1647950000000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -891,6 +891,7 @@ export default function App() {
       <Gallery />
       <Pricing />
       <Reviews />
+      <FAQ />
       <Contact />
       <Footer />
       <WhatsAppPopup />
